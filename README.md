@@ -1,6 +1,6 @@
 # Sistema para Farmácia
 
-Status do projeto: em desenvolvimento.
+Status do projeto: Em desenvolvimento.
 
 Tecnologias utilizadas: Net Beans, HTML, CSS, Java Script, Java, MySQL, JPA, Hibernate, Spring Boot.
 

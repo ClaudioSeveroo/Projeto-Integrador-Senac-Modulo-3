@@ -1,1 +1,1 @@
-Branch para armazenar o sistema de Farnmacia.
+Branch para armazenar o sistema de Farmacia.

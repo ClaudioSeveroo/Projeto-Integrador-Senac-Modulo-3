@@ -27,35 +27,39 @@
 
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
-                <thead class="table-success text-center">
-                    <tr>
-                        <th>ID</th>
-                        <th>Validade</th>
-                        <th>Nome</th>
-                        <th>Valor</th>
-                        <th>Quantidade</th>
-                        <th>Observações</th>
-                        <th>Excluir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="medicamento : ${medicamentos}">
-                        <td th:text="${medicamento.id}"></td>
-                        <td th:text="${medicamento.validade}"></td>
-                        <td th:text="${medicamento.nome}"></td>
-                        <td th:text="${medicamento.valor}"></td>
-                        <td th:text="${medicamento.quantidade}"></td>
-                        <td th:text="${medicamento.observacoes}"></td>
-                        <td><button type="button" class="btnExcluir btn-limpar">Excluir</button></td>
-                    </tr>
-                </tbody>
+                        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Validade</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Quantidade</th>
+                <th>Observações</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="medicamento : ${medicamentos}">
+                <td th:text="${medicamento.id}"></td>
+                <td th:text="${medicamento.validade}"></td>
+                <td th:text="${medicamento.nome}"></td>
+                <td th:text="${medicamento.valor}"></td>
+                <td th:text="${medicamento.quantidade}"></td>
+                <td th:text="${medicamento.observacoes}"></td>
+                <td>
+                    <a th:href="@{'/excluir/' + ${medicamento.id}}">
+                        <button type="button" onclick="return confirm('Deseja excluir?')">Excluir</button>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
             </table>
         </div>
     </main>
 
     <!-- Rodapé colado no fim da tela -->
     <footer class="bg-success text-white text-center py-3 shadow-sm">
-        Cláudio @2025
+        CláudioSevero@2025
     </footer>
 
     <!-- Bootstrap JS -->
@@ -63,14 +67,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous">
     </script>
-    
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('.btnExcluir').click(function(){
-            $(this).closest('tr').remove();
-        });
-    });
-</script>
+
 </body>
 </html>

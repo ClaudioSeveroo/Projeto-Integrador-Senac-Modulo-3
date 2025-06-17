@@ -1,28 +1,17 @@
 
 package com.estoque.farmacia.model;
 
+import jakarta.persistence.*; 
+import lombok.Data; 
 
+@Data 
+@Entity 
+@Table(name="Login")
 public class Login {
+    @Id 
+@GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String nome;
     private String senha;
-    
-    //Getters e Setters
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-    
-    
+      
 }

@@ -68,10 +68,7 @@ form label, form input {
   width: 100%;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="password"],
-input[type="email"] {
+input{
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
